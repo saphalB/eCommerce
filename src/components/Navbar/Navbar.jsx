@@ -68,7 +68,11 @@ const Navbar = ({ handleOrderPopup }) => {
               Creatix Universe
             </a>
           </div>
-          {/* search bar */}
+          {/*mobile search icon */}
+          <div className="sm:hidden">
+            <IoMdSearch className="text-gray-500 text-xl" />
+          </div>
+          {/* desktop search bar */}
           <div className="flex justify-between items-center gap-4 ">
             <div className="relative group hidden sm:block">
               <input
