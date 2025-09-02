@@ -81,7 +81,7 @@ const Testimonials = () => {
           <p data-aos="fade-up" className="text-sm text-primary ">
             What our Customers are saying about
           </p>
-          <h1 data-aos="fade-up" className="text-3xl font-bold">
+          <h1 data-aos="fade-up" className="text-3xl font-bold dark:text-white">
             Testimonials
           </h1>
           <p data-aos="fade-up" className="text-xs text-gray-400 ">
@@ -109,12 +109,12 @@ const Testimonials = () => {
                   <div className="flex flex-col gap-4 items-center">
                     <div className="space-y-3">
                       <p className="text-xs text-gray-500 ">{data.text}</p>
-                      <h1 className="text-xl font-bold text-black/80 dark:text-light">
+                      <h1 className="text-xl font-bold text-black/80 dark:text-white">
                         {data.name}
                       </h1>
                     </div>
                   </div>
-                  <p className="text-black/20 text-9xl font-serif absolute top-0 right-0">
+                  <p className="text-black/20 text-9xl dark:text-white font-serif absolute top-0 right-0">
                     ,,
                   </p>
                 </div>

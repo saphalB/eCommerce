@@ -39,7 +39,7 @@ const TopProducts = ({ handleOrderPopup }) => {
           <p data-aos="fade-up" className="text-sm text-primary ">
             Top Rated Products for you
           </p>
-          <h1 data-aos="fade-up" className="text-3xl font-bold">
+          <h1 data-aos="fade-up" className="text-3xl font-bold dark:text-white">
             Best Products
           </h1>
           <p data-aos="fade-up" className="text-xs text-gray-400 ">
@@ -49,7 +49,7 @@ const TopProducts = ({ handleOrderPopup }) => {
         </div>
 
         {/* Body Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5  place-items-center ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5  place-items-center dark:text-white ">
           {ProductsData.map((data) => (
             <div
               data-aos="zoom-in"

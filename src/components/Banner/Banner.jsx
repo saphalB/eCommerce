@@ -21,7 +21,10 @@ const Banner = () => {
           </div>
           {/* text detail section */}
           <div className="flex flex-col justify-center gap-6 sm:pt-0">
-            <h1 data-aos="fade-up" className="text-3xl sm:text-4xl font-bold">
+            <h1
+              data-aos="fade-up"
+              className="text-3xl sm:text-4xl font-bold dark:bg-gray-900 dark:text-white"
+            >
               Winter Sale Upto 50% Off
             </h1>
             <p
@@ -35,19 +38,19 @@ const Banner = () => {
             <div>
               <div data-aos="fade-up" className="flex items-center gap-4 ">
                 <GrSecure className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-violet-100 dark:bg-violet-400" />
-                <p>Quality Products </p>
+                <p className="dark:text-white">Quality Products </p>
               </div>
               <div data-aos="fade-up" className="flex items-center gap-4 ">
                 <IoFastFood className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-orange-100 dark:bg-orange-400" />
-                <p>Fast Delivery</p>
+                <p className="dark:text-white">Fast Delivery</p>
               </div>
               <div data-aos="fade-up" className="flex items-center gap-4 ">
                 <GiFoodTruck className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-green-100 dark:bg-green-400" />
-                <p>Easy Payment method</p>
+                <p className="dark:text-white">Easy Payment method</p>
               </div>
               <div data-aos="fade-up" className="flex items-center gap-4 ">
                 <GiFoodTruck className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-yellow-100 dark:bg-yellow-400" />
-                <p>Get Offers</p>
+                <p className="dark:text-white">Get Offers</p>
               </div>
             </div>
           </div>
