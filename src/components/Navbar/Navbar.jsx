@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../../assets/logo.jpeg";
 import { IoMdSearch } from "react-icons/io";
 import { FaCaretDown, FaCartShopping } from "react-icons/fa6";
@@ -54,6 +54,11 @@ const DropdownLink = [
 ];
 
 const Navbar = ({ handleOrderPopup }) => {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const toggleSearch = () => {
+    setIsSearchOpen(!isSearchOpen);
+  };
+
   return (
     <div
       className="shadow-md bg-white dark:bg-gray-900 dark:text-white
@@ -69,22 +74,31 @@ const Navbar = ({ handleOrderPopup }) => {
             </a>
           </div>
           {/* search bar */}
-          <div className="flex justify-between items-center gap-4 ">
-            <div className="relative group hidden sm:block">
-              <input
-                type="text"
-                placeholder="Search"
-                className="w-[200px] sm:w-[200px] group-hover:w-[300px] transition-all
-                           duration-300 rounded-full border border-gray-300 px-2 py-1 
-                           focus:outline-none focus:border-1 focus:border-primary
-                           dark:border-gray-500
-                           dark:bg-gray-800 "
-              />
+          <div className="flex justify-between items-center gap-4">
+            <div className="relative group">
               <IoMdSearch
-                className="text-gray-500 group-hover:text-primary absolute
-                            top-1/2 -translate-y-1/2 right-3  "
+                className="text-gray-500 group-hover:text-primary text-2xl cursor-pointer sm:hidden"
+                onClick={toggleSearch}
               />
+              <div
+                className={`${
+                  isSearchOpen ? "block" : "hidden"
+                } sm:block w-[150px] sm:w-[200px] group-hover:w-[250px]  transition-all duration-300 relative`}
+              >
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="w-full rounded-full border border-gray-300 px-2 py-1 
+                           focus:outline-none focus:border-1 focus:border-primary
+                           dark:border-gray-500 dark:bg-gray-800"
+                />
+                <IoMdSearch
+                  className="text-gray-500 group-hover:text-primary absolute
+                            top-1/2 -translate-y-1/2 right-3 "
+                />
+              </div>
             </div>
+
             {/* order button */}
             <button
               onClick={() => handleOrderPopup()}
