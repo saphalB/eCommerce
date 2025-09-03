@@ -117,9 +117,10 @@ const Navbar = ({ handleOrderPopup }) => {
           </div>
         </div>
       </div>
+
       {/* lower Navbar */}
       <div data-aos="zoom-in" className="flex justify-center">
-        <ul className="sm:flex hidden items-center gap-4">
+        <ul className="flex flex-row  items-center gap-4 py-2">
           {Menu.map((data) => (
             <li key={data.id}>
               <a
