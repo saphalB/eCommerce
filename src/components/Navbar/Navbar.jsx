@@ -76,10 +76,6 @@ const Navbar = ({ handleOrderPopup }) => {
           {/* search bar */}
           <div className="flex justify-between items-center gap-4">
             <div className="relative group">
-              <IoMdSearch
-                className="text-gray-500 group-hover:text-primary text-2xl cursor-pointer sm:hidden"
-                onClick={toggleSearch}
-              />
               <div
                 className={`${
                   isSearchOpen ? "block" : "hidden"
@@ -94,9 +90,13 @@ const Navbar = ({ handleOrderPopup }) => {
                 />
                 <IoMdSearch
                   className="text-gray-500 group-hover:text-primary absolute
-                            top-1/2 -translate-y-1/2 right-3 "
+                            top-1/2 -translate-y-1/2 right-3 hidden sm:block"
                 />
               </div>
+              <IoMdSearch
+                className="text-gray-500 group-hover:text-primary absolute text-2xl top-1/2 -translate-y-1/2 right-3  cursor-pointer sm:hidden"
+                onClick={toggleSearch}
+              />
             </div>
 
             {/* order button */}
